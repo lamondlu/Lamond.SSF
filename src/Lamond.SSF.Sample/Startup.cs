@@ -38,7 +38,7 @@ namespace Lamond.SSF.Sample
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+           //app.UseHttpsRedirection();
 
             app.UseRouting();
 
