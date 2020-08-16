@@ -4,6 +4,6 @@ namespace Lamond.SSF.Core.Concrete.Domain
 {
     public class CommandBus : ICommandBus
     {
-
+        
     }
 }
