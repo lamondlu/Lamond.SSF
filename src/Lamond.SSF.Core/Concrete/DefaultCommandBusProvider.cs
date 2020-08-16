@@ -4,7 +4,7 @@ using Lamond.SSF.Core.Concrete.Domain;
 
 namespace Lamond.SSF.Core.Concrete
 {
-    public class DefaultCommandBusFactory: ICommandBusFactory
+    public class DefaultCommandBusProvider: ICommandBusProvider
     {
         public ICommandBus GetInstance()
         {
