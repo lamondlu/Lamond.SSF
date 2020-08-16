@@ -4,7 +4,7 @@ using Lamond.SSF.Core.Models;
 
 namespace Lamond.SSF.AspNetCore
 {
-    public static class ServiceSetup
+    public static class SSFServiceExtensions
     {
         public static void AddSSF(this IServiceCollection services)
         {

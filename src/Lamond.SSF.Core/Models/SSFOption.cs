@@ -1,7 +1,8 @@
-namespace Lamond.SSF.Core.Models
-{
-    public class SSFOption
-    {
-        
+namespace Lamond.SSF.Core.Models {
+    public class SSFOption {
+        public void EnableLog () {
+
+        }
+
     }
 }
