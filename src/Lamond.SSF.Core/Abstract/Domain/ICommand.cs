@@ -2,14 +2,16 @@ using System;
 using System.Collections.Generic;
 using Lamond.SSF.Core.Models;
 
-namespace Lamond.SSF.Core.Abstract.Domain
-{
-    public interface ICommand
-    {
-         void ExecuteSuccess();
+namespace Lamond.SSF.Core.Abstract.Domain {
+    public interface ICommand {
+        string Operator { get; set; }
 
-        void ExecuteFail(BusinessError error);
+        DateTime OccurredOn{get;}
 
-        void ExecuteFail(IEnumerable<BusinessError> errors);
+        void ExecuteSuccess ();
+
+        void ExecuteFail (BusinessError error);
+
+        void ExecuteFail (IEnumerable<BusinessError> errors);
     }
 }
