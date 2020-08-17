@@ -4,6 +4,6 @@ namespace Lamond.SSF.Core.Abstract.Domain
     {
         void Test();
 
-         void Send<T>(T command) where T : ICommand;
+        void Send<T>(T command) where T : ICommand;
     }
 }

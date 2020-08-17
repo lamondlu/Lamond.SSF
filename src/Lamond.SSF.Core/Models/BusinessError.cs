@@ -2,7 +2,7 @@ namespace Lamond.SSF.Core.Models
 {
     public abstract class BusinessError
     {
-         public int ErrorCode
+        public int ErrorCode
         {
             get;
             private set;

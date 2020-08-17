@@ -1,7 +1,7 @@
-using System;
 using Lamond.SSF.Core.Abstract;
 using Lamond.SSF.Core.Abstract.Domain;
 using Lamond.SSF.Core.Models;
+using System;
 
 namespace Lamond.SSF.Core.Concrete.Domain
 {

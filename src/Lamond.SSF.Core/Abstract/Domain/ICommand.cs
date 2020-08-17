@@ -1,17 +1,19 @@
+using Lamond.SSF.Core.Models;
 using System;
 using System.Collections.Generic;
-using Lamond.SSF.Core.Models;
 
-namespace Lamond.SSF.Core.Abstract.Domain {
-    public interface ICommand {
+namespace Lamond.SSF.Core.Abstract.Domain
+{
+    public interface ICommand
+    {
         string Operator { get; set; }
 
-        DateTime OccurredOn{get;}
+        DateTime OccurredOn { get; }
 
-        void ExecuteSuccess ();
+        void ExecuteSuccess();
 
-        void ExecuteFail (BusinessError error);
+        void ExecuteFail(BusinessError error);
 
-        void ExecuteFail (IEnumerable<BusinessError> errors);
+        void ExecuteFail(IEnumerable<BusinessError> errors);
     }
 }

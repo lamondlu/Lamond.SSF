@@ -1,11 +1,11 @@
-using System.Collections.Generic;
 using Lamond.SSF.Core.Models;
+using System.Collections.Generic;
 
 namespace Lamond.SSF.Core.Abstract
 {
     public interface IDomainLogger
     {
-         bool IsEmpty { get; }
+        bool IsEmpty { get; }
 
         void WriteBusinessLog(string stepName, string message);
 

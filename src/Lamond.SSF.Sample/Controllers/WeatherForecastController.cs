@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Lamond.SSF.Core.Abstract.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Lamond.SSF.Core.Abstract.Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace Lamond.SSF.Sample.Controllers
@@ -15,7 +14,8 @@ namespace Lamond.SSF.Sample.Controllers
     {
         private ICommandBus commandBus;
 
-        public WeatherForecastController(ICommandBus commandBus){
+        public WeatherForecastController(ICommandBus commandBus)
+        {
             this.commandBus = commandBus;
         }
 
