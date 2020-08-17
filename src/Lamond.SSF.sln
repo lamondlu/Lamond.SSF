@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamond.SSF.Core", "Lamond.SSF.Core\Lamond.SSF.Core.csproj", "{15D005E4-D1AB-4086-AB64-35794AD7867E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lamond.SSF.Core", "Lamond.SSF.Core\Lamond.SSF.Core.csproj", "{15D005E4-D1AB-4086-AB64-35794AD7867E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamond.SSF.AspNetCore", "Lamond.SSF.AspNetCore\Lamond.SSF.AspNetCore.csproj", "{45B1E10F-103F-40E2-9FAB-C89F00F04E07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lamond.SSF.AspNetCore", "Lamond.SSF.AspNetCore\Lamond.SSF.AspNetCore.csproj", "{45B1E10F-103F-40E2-9FAB-C89F00F04E07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lamond.SSF.Sample", "Lamond.SSF.Sample\Lamond.SSF.Sample.csproj", "{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{15D005E4-D1AB-4086-AB64-35794AD7867E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +43,23 @@ Global
 		{45B1E10F-103F-40E2-9FAB-C89F00F04E07}.Release|x64.Build.0 = Release|Any CPU
 		{45B1E10F-103F-40E2-9FAB-C89F00F04E07}.Release|x86.ActiveCfg = Release|Any CPU
 		{45B1E10F-103F-40E2-9FAB-C89F00F04E07}.Release|x86.Build.0 = Release|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Debug|x64.Build.0 = Debug|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Debug|x86.Build.0 = Debug|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Release|x64.Build.0 = Release|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF72E3F6-9F0E-485C-ADA5-20B0B39BBD11}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE02D921-B762-49AF-8FA8-9BA1C60CA919}
 	EndGlobalSection
 EndGlobal
