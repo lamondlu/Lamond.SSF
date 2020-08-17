@@ -1,1 +1,1 @@
-# Lamond.SSF
+# Super Simple Framework
