@@ -1,4 +1,5 @@
 ﻿using Lamond.SSF.Core.Abstract.Domain;
+using Lamond.SSF.Sample.Commands;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -34,8 +35,9 @@ namespace Lamond.SSF.Sample.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-
-            commandBus.Test();
+            var newCommand = new TestCommand();
+            newCommand.TestString = "Hello World";
+            commandBus.Send(newCommand);
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

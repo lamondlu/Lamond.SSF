@@ -15,7 +15,7 @@ namespace Lamond.SSF.AspNetCore.Extensions
 
         public static void AddSSF(this IServiceCollection services, Action<SSFOption> configureAction)
         {
-
+            
         }
     }
 }
