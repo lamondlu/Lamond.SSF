@@ -5,55 +5,49 @@ namespace Lamond.SSF.Core.Models
 {
     public class CommandExecuteResult
     {
-        private List<BusinessError> executeErrors;
+        private readonly List<BusinessError> executeErrors;
 
         public bool Success { get; private set; }
 
-        public IEnumerable<BusinessError> Errors
-        {
-            get
-            {
-                return executeErrors.AsEnumerable();
-            }
-        }
+        public IEnumerable<BusinessError> Errors => executeErrors.AsEnumerable();
 
         public CommandExecuteResult()
         {
-            this.executeErrors = new List<BusinessError>();
+            executeErrors = new List<BusinessError>();
         }
 
         public void ExecuteSuccess()
         {
-            this.Success = true;
+            Success = true;
         }
 
         public void ExecuteFail(BusinessError error)
         {
-            this.Success = false;
+            Success = false;
 
             AddError(error);
         }
 
         public void ExecuteFail(IEnumerable<BusinessError> errors)
         {
-            this.Success = false;
+            Success = false;
 
             AddErrors(errors);
         }
 
         public void AddError(BusinessError error)
         {
-            this.executeErrors.Add(error);
+            executeErrors.Add(error);
         }
 
         public void RemoveError(BusinessError error)
         {
-            this.executeErrors.Remove(error);
+            executeErrors.Remove(error);
         }
 
         public void AddErrors(IEnumerable<BusinessError> errors)
         {
-            this.executeErrors.AddRange(errors);
+            executeErrors.AddRange(errors);
         }
     }
 }

@@ -16,8 +16,8 @@ namespace Lamond.SSF.Core.Models
 
         public BusinessError(int errorCode, string message)
         {
-            this.ErrorCode = errorCode;
-            this.Message = message;
+            ErrorCode = errorCode;
+            Message = message;
         }
     }
 }

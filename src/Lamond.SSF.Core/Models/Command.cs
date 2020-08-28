@@ -13,23 +13,23 @@ namespace Lamond.SSF.Core.Models
 
         public Command()
         {
-            this.ExecuteResult = new T();
+            ExecuteResult = new T();
             OccurredOn = DateTime.Now;
         }
 
         public void ExecuteSuccess()
         {
-            this.ExecuteResult.ExecuteSuccess();
+            ExecuteResult.ExecuteSuccess();
         }
 
         public void ExecuteFail(BusinessError error)
         {
-            this.ExecuteResult.ExecuteFail(error);
+            ExecuteResult.ExecuteFail(error);
         }
 
         public void ExecuteFail(IEnumerable<BusinessError> errors)
         {
-            this.ExecuteResult.ExecuteFail(errors);
+            ExecuteResult.ExecuteFail(errors);
         }
     }
 }

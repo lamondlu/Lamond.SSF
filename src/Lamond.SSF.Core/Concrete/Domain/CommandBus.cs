@@ -7,8 +7,8 @@ namespace Lamond.SSF.Core.Concrete.Domain
 {
     public class CommandBus : ICommandBus
     {
-        private SSFOption ssfOption = null;
-        private IDomainLogger domainLogger = null;
+        private readonly SSFOption ssfOption = null;
+        private readonly IDomainLogger domainLogger = null;
 
         public CommandBus(SSFOption ssfOption, IDomainLogger domainLogger)
         {

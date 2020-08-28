@@ -13,7 +13,7 @@ namespace Lamond.SSF.Sample.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private ICommandBus commandBus;
+        private readonly ICommandBus commandBus;
 
         public WeatherForecastController(ICommandBus commandBus)
         {
@@ -35,11 +35,13 @@ namespace Lamond.SSF.Sample.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var newCommand = new TestCommand();
-            newCommand.TestString = "Hello World";
+            TestCommand newCommand = new TestCommand
+            {
+                TestString = "Hello World"
+            };
             commandBus.Send(newCommand);
 
-            var rng = new Random();
+            Random rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
