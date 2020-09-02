@@ -7,19 +7,11 @@ namespace Lamond.SSF.Core.Attributes
 
     public class LogAttribute : Attribute
     {
-        private string _message;
 
-        public LogAttribute(string message)
-        {
-            _message = message;
-        }
 
-        public string Message
+        public LogAttribute()
         {
-            get
-            {
-                return _message;
-            }
+
         }
     }
 }

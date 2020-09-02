@@ -13,6 +13,7 @@ namespace Lamond.SSF.Sample.CommandHandlers
 
         public void Execute(TestCommand command)
         {
+            
             Console.WriteLine(command.TestString);
 
             command.ExecuteSuccess();

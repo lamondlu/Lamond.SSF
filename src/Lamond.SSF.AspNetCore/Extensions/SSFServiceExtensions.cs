@@ -1,4 +1,5 @@
-﻿using Lamond.SSF.Core.Abstract.Domain;
+﻿using Lamond.SSF.Core.Abstract;
+using Lamond.SSF.Core.Abstract.Domain;
 using Lamond.SSF.Core.Concrete.Domain;
 using Lamond.SSF.Core.Interceptors;
 using Lamond.SSF.Core.Models;
@@ -11,6 +12,7 @@ namespace Lamond.SSF.AspNetCore.Extensions
     {
         public static void AddSSF(this IServiceCollection services)
         {
+            services.AddScoped<IDomainLogger, ConsoleDomainLogger>();
             services.AddScoped<ICommandBus, CommandBus>();
             services.AddScoped<LogInterceptor>();
         }

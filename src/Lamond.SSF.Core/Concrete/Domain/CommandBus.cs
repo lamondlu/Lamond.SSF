@@ -8,33 +8,23 @@ namespace Lamond.SSF.Core.Concrete.Domain
 {
     public class CommandBus : ICommandBus
     {
-        private readonly SSFOption ssfOption = null;
         private readonly IDomainLogger domainLogger = null;
 
-        public CommandBus(SSFOption ssfOption, IDomainLogger domainLogger)
+        public CommandBus(IDomainLogger domainLogger)
         {
-            this.ssfOption = ssfOption;
             this.domainLogger = domainLogger;
         }
-
-        [Log("")]
+      
         public void Send<T>(T command) where T : ICommand
         {
-            if (ssfOption.EnableDomainLog && command != null)
-            {
-                domainLogger.WriteBusinessLog("Initializing Request", $"{command.Operator} is trying to run this action.");
-            }
-
             try
             {
-
+                command.ExecuteSuccess();
             }
             catch (Exception ex)
             {
                 domainLogger.WriteUnhandledErrorLog(ex.ToString());
             }
-
-            domainLogger.WriteBusinessLog("Request end", "Request End.");
         }
 
         public void Test()
