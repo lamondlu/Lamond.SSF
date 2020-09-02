@@ -1,5 +1,6 @@
 using Lamond.SSF.Core.Abstract;
 using Lamond.SSF.Core.Abstract.Domain;
+using Lamond.SSF.Core.Attributes;
 using Lamond.SSF.Core.Models;
 using System;
 
@@ -16,6 +17,7 @@ namespace Lamond.SSF.Core.Concrete.Domain
             this.domainLogger = domainLogger;
         }
 
+        [Log("")]
         public void Send<T>(T command) where T : ICommand
         {
             if (ssfOption.EnableDomainLog && command != null)

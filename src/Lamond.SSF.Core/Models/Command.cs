@@ -9,6 +9,7 @@ namespace Lamond.SSF.Core.Models
         public T ExecuteResult { get; protected set; }
 
         public string Operator { get; set; }
+
         public DateTime OccurredOn { get; private set; }
 
         public Command()
